@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html data-wf-page="625e9b640af6c1539e8ec720">
+
+<head>
+    <title>GuestureMath</title>
+
+    <link rel="stylesheet" href="../static/style.css">
+
+    <link href="img/logo" rel="shortcut icon" type="image/x-icon" />
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /* Typography settings */
+        
+        body{
+            background-color: #D2D2D2;
+            background-image:
+            repeating-linear-gradient(
+                to right, transparent 0 100px,
+                #25283b22 100px 101px
+            ),
+            repeating-linear-gradient(
+                to bottom, transparent 0 100px,
+                #25283b22 100px 101px
+            );
+        }
+        
+        body::before{
+            position: absolute;
+            width: min(1400px, 90vw);
+            top: 10%;
+            left: 50%;
+            height: 90%;
+            transform: translateX(-50%);
+            content: '';
+            background-image: url("/static/bg.png");
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: top center;
+            pointer-events: none;
+        }
+        html,
+        body {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+            font-feature-settings: "liga", "kern";
+            font-variant-numeric: proportional-nums;
+            overflow-x: hidden;
+        }
+
+
+        /* Scroll bar */
+
+        .section-team::-webkit-scrollbar-thumb {
+            background: #FFFFFF;
+            border-radius: 80px;
+        }
+
+        .section-team::-webkit-scrollbar {
+            height: 6px;
+        }
+
+
+        /* Border gradient */
+
+        .button-home,
+        .button-home--services {
+            position: relative;
+            padding: 17px 34px;
+        }
+
+        .button-home--contact {
+            position: relative;
+            padding: 9px 18px;
+        }
+
+
+        .button-home::before,
+        .button-home--contact::before,
+        .button-home--services::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 12px;
+            border: 2px solid transparent;
+            background: linear-gradient(90deg, #FE00AE, #8E39C5) border-box;
+            -webkit-mask:
+                linear-gradient(#fff 0 0) padding-box,
+                linear-gradient(#fff 0 0);
+            -webkit-mask-composite: destination-out;
+            mask-composite: exclude;
+        }
+
+        .button-home--contact::before {
+            border-radius: 8px;
+        }
+    </style>
+
+</head>
+<header>
+  
+    <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="gesture.html">Explore</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="#">Contact Us</a></li>
+    </ul>
+</header>
+
+<body class="body-home">
+    <section>
+        <img src="/static/stars.png" id="stars">
+        <img src="/static/moon.png" id="moon">
+        <img src="/static/mountains_behind.png" id="mountains_behind">
+        <h5 id="text" style=" left:30px;top:170px; ">MathWave</h2>
+        <a href="#sec" id="btn">Discover</a>
+        <img src="/static/mountains_front.png" id="mountains_front">
+    </section>
+    <div class="sec" id="sec">
+        <h2>About us</h2><br><br><br>
+        <p style="text-align:center;">Welcome to Math Wave! Our website revolutionizes math with hand gestures for input, delivering instant answers on screen. 
+           <br><br>  Join us on a journey into a touchless world where innovation meets convenience, making math as intuitive as a wave of your hand.Experience effortless, engaging, and interactive math, blending cutting-edge technology with ease.
+           Embrace the future of learning and problem-solving with just a wave of your hand, transforming math into an exciting, hands-on adventure.
+           <br><br>
+        </p>
+    </div>
+    
+
+
+
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let mountains_front = document.getElementById('mountains_front');
+        let header = document.querySelector('header');
+
+        window.addEventListener('scroll', function () {
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px';
+            moon.style.top = value * 1.0 + 'px';
+            mountains_behind.style.top = value * 0.5 + 'px';
+            mountains_front.style.top = value * 0 + 'px';
+            text.style.marginRight = value * 2 + 'px';
+            text.style.marginTop = value * 1.5 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+            header.style.top = value * 0.5 + 'px';
+        })
+
+    </script>
+
+<section>
+<div class="banner">
+    <div class="slider" style="--quantity: 10">
+        <div class="item" style="--position: 1"><img src="/static/ai4.jpeg" alt=""></div>
+        <div class="item" style="--position: 2"><img src="/static/ai6.jpeg" alt=""></div>
+        <div class="item" style="--position: 3"><img src="/static/]a7.jpeg" alt=""></div>
+        <div class="item" style="--position: 4"><img src="/static/b2.jpeg" alt=""></div>
+        <div class="item" style="--position: 5"><img src="/static/b3.jpeg" alt=""></div>
+        <div class="item" style="--position: 6"><img src="/static/b1.jpeg" alt=""></div>
+      
+        <div class="item" style="--position: 7"><img src="/static/ai3.jpeg" alt=""></div>
+        <div class="item" style="--position: 8"><img src="/static/a8.jpeg" alt=""></div>
+        <div class="item" style="--position: 9"><img src="/static/a9.jpeg" alt=""></div>
+        <div class="item" style="--position: 10"><img src="/static/ai2.jpeg" alt=""></div>
+    </div>
+    <div class="content">
+        
+      
+        <div class="model"></div>
+    </div>
+</div>
+</section>
+</body>
+
+</html>
+
+    <main class="main">
+
+        <!-- Section 1 -->
+        <div data-w-id="07959802-3c34-fd9f-c3a2-c08c8afd6e22" class="fold-section">
+            <div class="wrapper wrapper-fold  ">
+                <h1 class="fold-title">Math at your FingerTip !</h1>
+                <p class="subtitle-fold">
+                    Our website lets you explore and solve math effortlessly with just a tap or swipe. Solve complex problems using simple hand gestures—making math engaging and fun!             </p>
+
+                <a href="/start" class="button-home w-button">Get Started</a>
+            </div>
+            <img src="https://assets-global.website-files.com/62443d15248af30a21e60133/62568b2c54a4df01901956d4_icon-1.png"
+                loading="lazy" width="326.5" alt="" class="image-home-1" />
+            <img src="https://assets-global.website-files.com/62443d15248af30a21e60133/6256a8fb17566109b2e38857_cone-1.png"
+                loading="lazy" width="236.5" alt="" class="image-home-2"
+                style="will-change: transform; transform: translate3d(0px, -64.58px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+        </div>
+
+        <!-- Section 2 -->
+        <div data-w-id="d62851d8-e9c0-0095-9508-8642dabbf0de" class="section-help">
+            <div class="wrapper  ">
+                <div class="help-container">
+                    <h1 class="pre-title">HOW DO WE DO IT?<h1>
+                    <h2 data-w-id="47ee816a-2c59-c902-7204-c78d77a3cba7" class="title-help">
+                        Here&#x27;s how you can get instant solution</h2>
+                    <p data-w-id="78d03577-4778-7090-1498-885ebe5cc372" class="paragraph-3"><br>Here
+                        are the instructions to operate our website.
+                        You can use the hand gestures given below and observe the changes and solve complex calculations
+                        while having fun.</p><br><br>
+                </div>
+            </div>
+
+
+            <div class="cards-container">
+                <!-- box 1 -->
+                <div class="card-help">
+                    <div class="icon-card w-embed">
+                        <img src="/static/hand_8082486-removebg-preview.png" style="width:133px; height:61px; viewBox: 0 0 379 202 ;fill: none ;background:transparent;">
+                        
+                    </div>
+                    <p class="paragraph-4">Thumb</p>
+                    <p class="paragraph-5">The thumb command clears screen, refreshing the workspace for the next tasks
+    </p>
+                </div>
+
+                <!-- box 2 -->
+                <div class="card-help">
+                    <div class="icon-card w-embed">
+                
+                    <img src=" /static/f4c18dfc-d83d-476b-a6df-f2df4e925a68-removebg-preview.png" style=" display:flex" height="61px" width="133px" >
+                          
+                    </div>
+                    <p class="paragraph-4">Index Finger </p>
+                    <p class="paragraph-5">The index finger precisely writes on screen, enhancing control and accuracy
+                    </p>
+                </div>
+
+                <!-- box 3 -->
+                <div class="card-help">
+                    <div class="icon-card w-embed">
+                        <img src="/static/hand_8082531-removebg-preview.png" style=" display:flex" height="61px" width="133px" >
+                          
+                    </div>
+                    <p class="paragraph-4">Set of Four</p>
+                    <p class="paragraph-5">This gesture trigger the display of the result on the screen making it simple</p>
+                </div>
+            </div>
+            <img src="https://assets-global.website-files.com/62443d15248af30a21e60133/62568b2d90c44730e9365e5c_sphere.png"
+                loading="lazy" width="73.5" alt="" class="image-help-4" />
+            <img src="https://assets-global.website-files.com/62443d15248af30a21e60133/62568b2d90c44730e9365e5c_sphere.png"
+                loading="lazy" width="73.5" alt="" class="image-help-3" />
+            <img src="https://assets-global.website-files.com/62443d15248af30a21e60133/62568b2d90c44730e9365e5c_sphere.png"
+                loading="lazy" width="73.5" alt="" class="image-help-1" />
+            <img src="https://assets-global.website-files.com/62443d15248af30a21e60133/62568b2d90c4477975365e5d_torus-2.png"
+                loading="lazy" alt="" width="172" class="image-help-5" />
+            <img src="https://assets-global.website-files.com/62443d15248af30a21e60133/62568b2b87eba03819631801_sphere-2.png"
+                loading="lazy" width="123" alt="" class="image-help-2" />
+        </div>
+
+        <!-- Section 3 -->
+        <div data-w-id="dea27474-dda4-ef93-da06-6639fff7b299" class="section-case-study">
+            <img src="https://assets-global.website-files.com/62443d15248af30a21e60133/62568b2d90c44730e9365e5c_sphere.png"
+                loading="lazy" alt="" width="122" class="image-case-study-1" />
+            <div class="wrapper wrapper--case-study  ">
+                <div data-w-id="3071ae50-a55f-5d80-357a-fe02f6e8afe7" class="case-study-container">
+
+                    <h3 class="title-case-tudy">Wow Factor of MathWave</h3>
+                    <p class="paragraph-case-study">Experience the future of math with our innovative website! Simply use hand gestures to input questions, and watch as the answers magically appear on screen. No more typing—just intuitive, touch-free interaction. Our site combines cutting-edge gesture recognition technology with seamless user experience. Revolutionize how you solve math problems and see results in real-time with just a wave of your hand!</p>
+                </div>
+                <img class="image"
+                    src="https://assets-global.website-files.com/62443d15248af30a21e60133/624c17e520e315d7c8b82e32_icon-sucess-case-study.png"
+                    width="330" height="330" alt="" sizes="(max-width: 991px) 100vw, (max-width: 1439px) 33vw, 330px"
+                    data-w-id="fb6cde94-0e5c-a44e-3b0c-b1c806504c29" loading="lazy"
+                    srcset="https://assets-global.website-files.com/62443d15248af30a21e60133/624c17e520e315d7c8b82e32_icon-sucess-case-study-p-500.png 500w, https://assets-global.website-files.com/62443d15248af30a21e60133/624c17e520e315d7c8b82e32_icon-sucess-case-study.png 802w" />
+            </div>
+            <div class="lines-bg"></div>
+            <div class="balles-bg"></div><img
+                src="https://assets-global.website-files.com/62443d15248af30a21e60133/627d555bbea9a45b851d1bbd_balls.png"
+                loading="lazy" sizes="(max-width: 1439px) 100vw, 1140px"
+                srcset="https://assets-global.website-files.com/62443d15248af30a21e60133/627d555bbea9a45b851d1bbd_balls-p-500.png 500w, https://assets-global.website-files.com/62443d15248af30a21e60133/627d555bbea9a45b851d1bbd_balls-p-800.png 800w, https://assets-global.website-files.com/62443d15248af30a21e60133/627d555bbea9a45b851d1bbd_balls-p-1080.png 1080w, https://assets-global.website-files.com/62443d15248af30a21e60133/627d555bbea9a45b851d1bbd_balls-p-1600.png 1600w, https://assets-global.website-files.com/62443d15248af30a21e60133/627d555bbea9a45b851d1bbd_balls-p-2000.png 2000w, https://assets-global.website-files.com/62443d15248af30a21e60133/627d555bbea9a45b851d1bbd_balls.png 2291w"
+                alt="" class="balles-img" /><img
+                src="https://assets-global.website-files.com/62443d15248af30a21e60133/627d555b733aa5db90daec57_No%20balls.png"
+                loading="lazy" sizes="(max-width: 1439px) 100vw, 1140px"
+                srcset="https://assets-global.website-files.com/62443d15248af30a21e60133/627d555b733aa5db90daec57_No%20balls-p-500.png 500w, https://assets-global.website-files.com/62443d15248af30a21e60133/627d555b733aa5db90daec57_No%20balls-p-800.png 800w, https://assets-global.website-files.com/62443d15248af30a21e60133/627d555b733aa5db90daec57_No%20balls-p-1080.png 1080w, https://assets-global.website-files.com/62443d15248af30a21e60133/627d555b733aa5db90daec57_No%20balls-p-1600.png 1600w, https://assets-global.website-files.com/62443d15248af30a21e60133/627d555b733aa5db90daec57_No%20balls-p-2000.png 2000w, https://assets-global.website-files.com/62443d15248af30a21e60133/627d555b733aa5db90daec57_No%20balls.png 2291w"
+                alt="" class="lines-img" />
+        </div>
+
+        <!-- Section 4 -->
+        <div id="start_game_section" class="section-building-team">
+            <div class="wrapper wrapper--building  ">
+                <h2 class="title-building">Let's Get Started</h2>
+                <p class="paragraph-building">Let&#x27;s start learning maths in an unique &amp; interactive way</p>  <a href="/start" class="button-home w-button">Have fun</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="wrapper-menu--footer">
+            <div class="footer-contain">
+                <div class="footer-contain--left">
+                    <div class="brand-logo-footer w-embed" style="cursor: pointer;">
+                        <h2>MathWave</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="subfooter-contain">
+                <div class="copyright">
+                    <p class="paragraph-2"> 2024 by SPI Coders. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=62443d15248af30a21e60133"
+        type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+        crossorigin="anonymous"></script>
+    <script src="https://assets-global.website-files.com/62443d15248af30a21e60133/js/webflow.02891b92f.js"
+        type="text/javascript"></script>
+
+</body>
+
+</html>
